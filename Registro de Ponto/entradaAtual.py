@@ -8,14 +8,12 @@ from pynput import mouse
 while True:
     data_e_hora_atuais = datetime.today()
     if data_e_hora_atuais.hour >= 8 and data_e_hora_atuais.minute >= 23:
-        data_e_hora_atuais = datetime.today()
         time.sleep(10)
     if data_e_hora_atuais.hour == 8 and data_e_hora_atuais.minute == 24:
         time.sleep(10)
         print("Agora vou continuar o programa, já são",
               data_e_hora_atuais.hour, ":", data_e_hora_atuais.minute)
     else:
-        today = datetime.today()
         print("Não está na hora...", "...ainda são", data_e_hora_atuais.hour,
               ":", data_e_hora_atuais.minute, ":", data_e_hora_atuais.second)
         time.sleep(20)
@@ -65,7 +63,7 @@ while True:
 
             pyautogui.click(1798, 14, duration=1)
 
-        pyautogui.alert('Seu ponto foi registrado com sucesso')
+        pyautogui.alert('Seu ponto foi registrado com sucesso') 
     break
 
 # Escrever pyautogui.write('')
